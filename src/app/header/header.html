@@ -1,0 +1,16 @@
+<header class="header-container">
+	<a href="/"><img class="logo" src="/assets/logo/tea-logo.png" alt="logo"></a>
+	<div class="nav-links-content" [class.menuClass]="menuVariable">
+		<i class="nav-icon close-icon" (click)="closeMenu()">X</i>
+		<ul class="nav-menu">
+			<li><a routerLink="/about">About</a></li>
+			<li><a routerLink="/about">Services</a></li>
+			<li><a routerLink="/card">Card</a></li>
+		</ul>
+	</div>
+	<i class="nav-icon open-icon" (click)="openMenu()">
+		<div class="a"></div>
+		<div class="a"></div>
+		<div class="a"></div>
+	</i>
+</header>
