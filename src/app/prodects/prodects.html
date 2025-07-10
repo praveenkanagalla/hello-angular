@@ -1,7 +1,23 @@
 <ul class="card-container">
-    <li *ngFor="let food of foods">
+    <li *ngFor="let prodect of prodects">
         <a class="card-content">
-            <img src={{food.imageUrl}} alt="img">
+            <img src={{prodect.imageUrl}} alt="img">
+            <div class="prodect-content">
+                <div class="prodect-name">{{prodect.name}}</div>
+                <span class="favorite {{prodect.favorite?'':'not'}}">❤️</span>
+                <div class="prodect-footer">
+                    <div class="making-time">
+                        <span>🕒</span>
+                        {{prodect.makingTime}}
+                    </div>
+                    <div class="price">
+                        {{prodect.price|currency:'INR'}}
+                    </div>
+                </div>
+                <div class="button-content">
+                    <button class="add-card">Add to card</button>
+                </div>
+            </div>
         </a>
     </li>
 </ul>

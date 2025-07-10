@@ -11,11 +11,16 @@ import { CommonModule } from '@angular/common';
   styleUrl: './prodects.css'
 })
 export class Prodects implements OnInit {
-  foods: Foods[] = [];
+
+  // foods all items in one array...
+  prodects: Foods[] = [];
+
+  // food service including here...
   constructor(private fs: FoodService) { }
 
+  // foods all items getting here...
   ngOnInit(): void {
-    this.foods = this.fs.getAll();
+    this.prodects = this.fs.getAll();
   }
 
 
