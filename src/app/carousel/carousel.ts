@@ -11,10 +11,10 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 export class Carousel {
 
   slides = [
-    { img: 'assets/banner-imgs/tea.webp' },
-    { img: 'assets/banner-imgs/lemman-tea.jpg' },
-    { img: 'assets/banner-imgs/coffee-1.avif' },
-    { img: 'assets/banner-imgs/black-tea.jpg' }
+    { img: '../../assets/banner-imgs/tea.webp' },
+    { img: '../../assets/banner-imgs/lemman-tea.jpg' },
+    { img: '../../assets/banner-imgs/coffee-1.avif' },
+    { img: '../../assets/banner-imgs/black-tea.jpg' }
   ];
 
   slideConfig = {
