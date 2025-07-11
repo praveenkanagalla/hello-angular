@@ -1,10 +1,10 @@
 <header class="header-container">
-	<a href="/"><img class="logo" src="/assets/logo/tea-logo.png" alt="logo"></a>
+	<a routerLink="/"><img class="logo" src="/assets/logo/logo-1.png" alt="logo"></a>
 	<div class="nav-links-content" [class.menuClass]="menuVariable">
 		<i class="nav-icon close-icon" (click)="closeMenu()">X</i>
 		<ul class="nav-menu">
-			<li><a routerLink="/about" routerLinkActive="active">About</a></li>
-			<li><a routerLink="/card">Card</a></li>
+			<li><a routerLink="/about">About</a></li>
+			<li><a routerLink="/cart">Cart</a></li>
 		</ul>
 	</div>
 	<i class="nav-icon open-icon" (click)="openMenu()">

@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.html',
   styleUrl: './header.css',
+  imports: [RouterModule],
 })
 export class Header {
 
@@ -16,6 +17,9 @@ export class Header {
   closeMenu() {
     this.menuVariable = false;
     console.log("Close Menu...");
+  }
+  Menu() {
+    console.log("About...")
   }
 
 }

@@ -5,6 +5,7 @@ import { Search } from '../search/search';
 
 @Component({
   selector: 'app-home',
+  standalone: true,
   imports: [Carousel, Prodects, Search],
   templateUrl: './home.html',
   styleUrl: './home.css'

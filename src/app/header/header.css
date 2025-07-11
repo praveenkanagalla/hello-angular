@@ -15,8 +15,14 @@
 	background-color: #682f12;
 }
 
+.logo-content {
+	text-decoration: none;
+}
+
 .logo {
-	height: 80px;
+	height: 75px;
+	width: 120px;
+	border-radius: 20px
 }
 
 .nav-links-content {
@@ -70,6 +76,7 @@
 
 	.logo {
 		height: 60px;
+		width: 120px;
 	}
 
 	.text-box h1 {
