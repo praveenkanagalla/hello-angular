@@ -23,5 +23,8 @@ export class Prodects implements OnInit {
     this.prodects = this.fs.getAll();
   }
 
+  addToCart() {
+    console.log("Add to Cart...");
+  }
 
 }
