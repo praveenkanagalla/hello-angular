@@ -1,23 +1,49 @@
 <ul class="card-container">
-    <li *ngFor="let prodect of prodects">
+    <li *ngFor="let product of products">
         <a class="card-content">
-            <img src={{prodect.imageUrl}} alt="img">
+            <img src={{product.imageUrl}} alt="img">
             <div class="prodect-content">
-                <div class="prodect-name">{{prodect.name}}</div>
-                <span class="favorite {{prodect.favorite?'':'not'}}">❤️</span>
+                <div class="prodect-name">{{product.name}}</div>
+                <span class="favorite" [class.not]="!product.favorite">❤️</span>
                 <div class="prodect-footer">
                     <div class="making-time">
                         <span>🕒</span>
-                        {{prodect.makingTime}}
+                        {{product.makingTime}}
                     </div>
                     <div class="price">
-                        {{prodect.price|currency:'INR'}}
+                        {{product.price|currency:'INR'}}
                     </div>
                 </div>
                 <div class="button-content">
-                    <button (click)="addToCart()" class="add-card">Add to card</button>
+                    <button (click)="addToCart(product)" class="add-card">Add to card</button>
                 </div>
             </div>
         </a>
     </li>
 </ul>
+
+
+<!-- <ul class="card-container">
+    <li *ngFor="let product of products">
+        <div class="card-content">
+            <img [src]="product.imageUrl" alt="img">
+            <div class="product-content">
+                <div class="product-name">{{ product.name }}</div>
+                <span class="favorite" [class.not]="!product.favorite">❤️</span>
+
+                <div class="product-footer">
+                    <div class="making-time">
+                        <span>🕒</span> {{ product.makingTime }}
+                    </div>
+                    <div class="price">
+                        {{ product.price | currency: 'INR' }}
+                    </div>
+                </div>
+
+                <div class="button-content">
+                    <button (click)="addToCart(product)" class="add-card">Add to cart</button>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul> -->

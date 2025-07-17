@@ -1,30 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FoodService } from '../services/food-service';
 import { Foods } from '../shared/models/food';
 import { CommonModule } from '@angular/common';
+import { CartService } from '../services/cart-service';
 
 @Component({
   selector: 'app-prodects',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './prodects.html',
-  styleUrl: './prodects.css'
+  styleUrls: ['./prodects.css'] // ✅ Corrected from `styleUrl`
 })
 export class Prodects implements OnInit {
 
-  // foods all items in one array...
-  prodects: Foods[] = [];
+  @Input() products: Foods[] = [];
 
-  // food service including here...
-  constructor(private fs: FoodService) { }
+  searchTerm: string = ''; // ✅ Holds search input value
 
-  // foods all items getting here...
+  constructor(private fs: FoodService, private cartService: CartService) { } // ✅ Saved cartService as class property
+
   ngOnInit(): void {
-    this.prodects = this.fs.getAll();
+    this.products = this.fs.getAll(); // ✅ Fixed typo: changed `this.prodects` to `this.products`
   }
 
-  addToCart() {
-    console.log("Add to Cart...");
+  addToCart(product: Foods) {
+    this.cartService.addToCart(product);
+    alert(`${product.name} added to cart`);
   }
-
 }
