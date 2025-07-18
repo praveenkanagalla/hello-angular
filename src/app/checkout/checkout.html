@@ -9,14 +9,14 @@
                 <img class="checkout-img" src={{item.imageUrl}} alt="{{ item.name }}" />
 
                 <!-- Item Details -->
-                <div style="flex-grow: 1;">
-                    {{ item.name }} – ₹{{ item.price }} × {{ item.quantity }}
+                <div style="flex-grow: 1; width: 130px">
+                    {{ item.name }} <br> ₹{{ item.price }} × {{ item.quantity }}
                 </div>
 
                 <!-- Actions -->
                 <div class="checkout-btns">
-                    <button class="checkout-btn" (click)="increaseQty(i)">+</button>
                     <button class="checkout-btn" (click)="decreaseQty(i)">-</button>
+                    <button class="checkout-btn" (click)="increaseQty(i)">+</button>
                     <button class="checkout-btn-d" (click)="removeItem(i)"><img class="checkout-btn-d-img"
                             src="../../assets/delete-icon.png" alt="search"> </button>
                 </div>

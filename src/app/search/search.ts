@@ -15,6 +15,8 @@ export class Search {
   @Output() search = new EventEmitter<string>();
 
   onSearch() {
-    this.search.emit(this.searchTerm);
+    this.search.emit(this.searchTerm); // ✅ This should emit user input
   }
+
 }
+

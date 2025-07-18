@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { Carousel } from "../carousel/carousel";
 import { Prodects } from "../prodects/prodects";
-import { Search } from '../search/search';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [Carousel, Prodects, Search],
+  imports: [Carousel, Prodects],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })

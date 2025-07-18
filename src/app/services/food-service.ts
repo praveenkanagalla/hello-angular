@@ -17,8 +17,8 @@ export class FoodService {
         price: 40,
         makingTime: '5mints',
         favorite: true,
-        // stars: 4.5,
-        imageUrl: '../../assets/prodect-imgs/green-tea.jpg'
+        imageUrl: '../../assets/prodect-imgs/green-tea.jpg',
+        tags: ['Hot', 'Tea', 'Green',]
       },
       {
         id: 2,
@@ -26,7 +26,8 @@ export class FoodService {
         price: 30,
         makingTime: '3mints',
         favorite: true,
-        imageUrl: '../../assets/prodect-imgs/black-coffee.avif'
+        imageUrl: '../../assets/prodect-imgs/black-coffee.avif',
+        tags: ['Coffee', 'Black coffee,', 'Hot']
       },
       {
         id: 3,
@@ -34,7 +35,8 @@ export class FoodService {
         price: 30,
         makingTime: '5mints',
         favorite: true,
-        imageUrl: '../../assets/prodect-imgs/coffee.avif'
+        imageUrl: '../../assets/prodect-imgs/coffee.avif',
+        tags: ['Coffee', 'Hot']
       },
       {
         id: 4,
@@ -42,7 +44,8 @@ export class FoodService {
         price: 50,
         makingTime: '5-10mints',
         favorite: true,
-        imageUrl: '../../assets/prodect-imgs/cold-coffee.avif'
+        imageUrl: '../../assets/prodect-imgs/cold-coffee.avif',
+        tags: ['Coffee', 'Cold']
       },
       {
         id: 5,
@@ -50,15 +53,17 @@ export class FoodService {
         price: 30,
         makingTime: '5-10mints',
         favorite: true,
-        imageUrl: '../../assets/prodect-imgs/ginger-tea.jpg'
+        imageUrl: '../../assets/prodect-imgs/ginger-tea.jpg',
+        tags: ['Tea', 'Ginger', "Hot"]
       },
       {
         id: 6,
-        name: 'Leman Tea',
+        name: 'Lemon Tea',
         price: 30,
         makingTime: '5mints',
         favorite: true,
-        imageUrl: '../../assets/prodect-imgs/leman-tea.jpg'
+        imageUrl: '../../assets/prodect-imgs/leman-tea.jpg',
+        tags: ['Tea', 'Lemon', 'Hot']
       },
       {
         id: 7,
@@ -66,7 +71,8 @@ export class FoodService {
         price: 30,
         makingTime: '5-10mints',
         favorite: true,
-        imageUrl: '../../assets/prodect-imgs/masala-tea.jpg'
+        imageUrl: '../../assets/prodect-imgs/masala-tea.jpg',
+        tags: ['Tea', 'Masala', 'Hot']
       },
       {
         id: 8,
@@ -74,7 +80,8 @@ export class FoodService {
         price: 20,
         makingTime: '5mints',
         favorite: true,
-        imageUrl: '../../assets/prodect-imgs/tea.jpg'
+        imageUrl: '../../assets/prodect-imgs/tea.jpg',
+        tags: ['Tea', 'hot']
       }
 
     ]

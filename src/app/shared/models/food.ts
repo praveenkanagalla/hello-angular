@@ -6,4 +6,5 @@ export class Foods {
     // stars: number = 0;
     imageUrl!: string;
     makingTime!: string;
+    tags?: string[];
 }
