@@ -54,10 +54,6 @@
 	transition: 0.5s;
 }
 
-.nav-links-content ul li:hover ::after {
-	width: 100%;
-}
-
 .nav-icon {
 	display: none;
 }
@@ -67,6 +63,15 @@
 	width: 25px;
 	background-color: #f1f1f1;
 	margin-top: 4px;
+}
+
+.checkout-icon {
+	position: relative;
+}
+
+.cart-count {
+	position: absolute;
+	bottom: 10px;
 }
 
 @media screen and (max-width: 996px) {

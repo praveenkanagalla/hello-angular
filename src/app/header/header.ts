@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { CartService } from '../services/cart-service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.html',
   styleUrl: './header.css',
-  imports: [RouterModule],
+  imports: [RouterModule, CommonModule],
 })
 export class Header {
 
@@ -20,6 +22,16 @@ export class Header {
   }
   Menu() {
     console.log("About...")
+  }
+
+  cartCount = 0;
+
+  constructor(private cartService: CartService) { }
+
+  ngOnInit(): void {
+    this.cartService.cartItems$.subscribe(items => {
+      this.cartCount = items.reduce((count, item) => count + item.quantity, 0);
+    });
   }
 
 }

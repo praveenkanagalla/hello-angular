@@ -3,43 +3,54 @@ import { BehaviorSubject } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class CartService {
-  private cartItems: any[] = [];
   private cartSubject = new BehaviorSubject<any[]>([]);
+  cartItems$ = this.cartSubject.asObservable();
+
+  constructor() { }
 
   getCart() {
-    return this.cartSubject.asObservable();
+    return this.cartItems$;
   }
 
   addToCart(product: any) {
-    const index = this.cartItems.findIndex(p => p.id === product.id);
+    const items = [...this.cartSubject.value];  // correct way to access current items
+    const index = items.findIndex(p => p.id === product.id);
+
     if (index !== -1) {
-      this.cartItems[index].quantity += 1;
+      items[index].quantity += 1;
     } else {
-      this.cartItems.push({ ...product, quantity: 1 });
+      items.push({ ...product, quantity: 1 });
     }
-    this.cartSubject.next(this.cartItems);
+
+    this.cartSubject.next(items);
   }
 
   removeFromCart(index: number) {
-    this.cartItems.splice(index, 1);
-    this.cartSubject.next(this.cartItems);
+    const items = [...this.cartSubject.value];
+    items.splice(index, 1);
+    this.cartSubject.next(items);
   }
 
   updateQuantity(index: number, change: number) {
-    this.cartItems[index].quantity += change;
-    if (this.cartItems[index].quantity <= 0) {
-      this.removeFromCart(index);
-    } else {
-      this.cartSubject.next(this.cartItems);
+    const items = [...this.cartSubject.value];
+    items[index].quantity += change;
+
+    if (items[index].quantity <= 0) {
+      items.splice(index, 1);
     }
+
+    this.cartSubject.next(items);
   }
 
   getTotal() {
-    return this.cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    return this.cartSubject.value.reduce((sum, item) => sum + item.price * item.quantity, 0);
   }
 
   clearCart() {
-    this.cartItems = [];
     this.cartSubject.next([]);
+  }
+
+  getCartCount(): number {
+    return this.cartSubject.value.reduce((count, item) => count + item.quantity, 0);
   }
 }
