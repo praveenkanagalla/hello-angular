@@ -67,11 +67,15 @@
 
 .checkout-icon {
 	position: relative;
+	text-decoration: none;
+	font-size: 25px;
 }
 
 .cart-count {
 	position: absolute;
 	bottom: 10px;
+	text-decoration: none;
+	color: #fff;
 }
 
 @media screen and (max-width: 996px) {
@@ -132,6 +136,16 @@
 
 	.nav-links-content ul {
 		padding: 30px;
+	}
+
+	.menu-phone-tab {
+		display: flex;
+		text-align: center;
+
+	}
+
+	.checkout-icon {
+		margin-right: 25px;
 	}
 
 }

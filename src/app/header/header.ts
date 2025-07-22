@@ -20,9 +20,6 @@ export class Header {
     this.menuVariable = false;
     console.log("Close Menu...");
   }
-  Menu() {
-    console.log("About...")
-  }
 
   cartCount = 0;
 

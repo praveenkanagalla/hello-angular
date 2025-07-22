@@ -1,13 +1,16 @@
 .footer-container {
-    height: 80px;
     width: 100%;
+    background-color: #682f12;
+}
+
+.footer-content {
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 2px solid #eee;
+    border-bottom: 2px solid #eee;
     padding-left: 2%;
     padding-right: 2%;
-    background-color: #682f12;
 }
 
 .footer-logo a {
@@ -40,4 +43,15 @@
     width: 30px;
     margin: 0 5px;
     border-radius: 8px;
+}
+
+.footer-bottom-text {
+    width: 100%;
+    padding: 28px 0;
+    text-align: center;
+}
+
+.footer-bottom-text p {
+    color: #fff;
+    margin-bottom: 0
 }
